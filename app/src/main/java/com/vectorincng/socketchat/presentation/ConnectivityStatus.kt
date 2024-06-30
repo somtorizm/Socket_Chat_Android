@@ -1,7 +1,6 @@
-package com.vectorincng.cloudchef.presentation
+package com.vectorincng.socketchat.presentation
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
@@ -26,9 +25,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vectorincng.cloudchef.R
-import com.vectorincng.cloudchef.utils.ConnectionState
-import com.vectorincng.cloudchef.utils.connectivityState
+import com.vectorincng.socketchat.utils.ConnectionState
+import com.vectorincng.socketchat.utils.connectivityState
+import com.vectorincng.socketchat.R
 import kotlinx.coroutines.delay
 
 @Composable
@@ -67,9 +66,9 @@ fun ConnectivityStatusBox(isConnected: Boolean, isConnecting: Boolean) {
     }
 
     val iconResource = when {
-        isConnecting -> R.drawable.baseline_rotate_right_24
-        isConnected -> R.drawable.connected
-        else -> R.drawable.error_network
+        isConnecting -> R.drawable.baseline_connecting_airports_24
+        isConnected -> R.drawable.baseline_filter_vintage_24
+        else -> android.R.drawable.radiobutton_off_background
     }
 
     Box(
