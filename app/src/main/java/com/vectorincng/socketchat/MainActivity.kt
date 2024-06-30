@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                             CallScreen(navController = navController)
                         }
                         composable("login") {
-                            LoginScreen()
+                            LoginScreen(navController)
                         }
                     }
                 }

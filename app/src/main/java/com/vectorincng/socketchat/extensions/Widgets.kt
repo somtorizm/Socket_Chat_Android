@@ -61,22 +61,16 @@ fun EmailTextField(
             .fillMaxWidth()
     ) {
         TextField(
-            colors = TextFieldDefaults.textFieldColors(
-                focusedIndicatorColor = Color.Transparent,
-                disabledIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-            ),
             shape = RoundedCornerShape(10.dp),
             value = emailState,
             onValueChange = {
                 emailState = it
             }, label = {
                 Text(
-                    "Email Address",
-                    color = Color(0xff1C2439),
-
+                    "Username"
                 )
-            }
+            },
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
