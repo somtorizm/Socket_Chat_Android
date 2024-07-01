@@ -64,8 +64,37 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    val composeBom = platform(libs.androidx.compose.bom)
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.androidx.activity.compose)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.compose.runtime.livedata)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.google.android.material)
+
+    implementation(libs.androidx.compose.foundation.layout)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.compose.ui.util)
+    implementation(libs.androidx.compose.ui.viewbinding)
+    implementation(libs.androidx.compose.ui.googlefonts)
+
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+
     //Dagger - Hilt
     implementation (libs.hilt.android)
+    implementation(libs.androidx.lifecycle.runtime.compose.android)
     kapt (libs.hilt.android.compiler)
     kapt (libs.androidx.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)

@@ -17,8 +17,11 @@ import com.vectorincng.socketchat.ui.theme.SocketChatTheme
 import com.vectorincng.socketchat.ui.theme.screens.CallScreen
 import com.vectorincng.socketchat.ui.theme.screens.HomeScreen
 import com.vectorincng.socketchat.ui.theme.screens.LoginScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
     @OptIn(ExperimentalAnimationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

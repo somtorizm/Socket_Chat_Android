@@ -1,7 +1,9 @@
 package com.vectorincng.socketchat.di
 
-import com.vectorincng.socketchat.data.KtorRealtimeMessagingClient
-import com.vectorincng.socketchat.data.RealTimeMessagingClient
+import com.vectorincng.socketchat.data.remote.ChatSocketImpl
+import com.vectorincng.socketchat.data.remote.ChatSocketService
+import com.vectorincng.socketchat.data.remote.MessageService
+import com.vectorincng.socketchat.data.remote.MessageServiceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,7 +29,13 @@ object AppModules {
 
     @Singleton
     @Provides
-    fun provideRealTimeMessagingClient(httpClient: HttpClient): RealTimeMessagingClient {
-        return KtorRealtimeMessagingClient(httpClient)
+    fun provideMessageService(httpClient: HttpClient): MessageService {
+        return MessageServiceImpl(httpClient)
+    }
+
+    @Singleton
+    @Provides
+    fun provideChatService(httpClient: HttpClient): ChatSocketService {
+        return ChatSocketImpl(httpClient)
     }
 }
